@@ -1,21 +1,22 @@
 package com.example.flixster
 
 import android.os.Parcelable
-import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
+import kotlinx.parcelize.IgnoredOnParcel
 import kotlinx.parcelize.Parcelize
 import org.json.JSONArray
-import java.net.URI.create
 
 @Parcelize
 data class Movie(
     val movieId: Int,
+    val vote_average: Double,
+    val isAdult: Boolean,
+    val releaseDate: String,
     private val posterPath: String,
     private val backdropPath: String,
     val title: String,
     val overview: String,
-    val vote_average: Double,
 ) : Parcelable {
+    @IgnoredOnParcel
     val posterImageUrl = "https://image.tmdb.org/t/p/w342/$posterPath"
     val backdropImageUrl = "https://image.tmdb.org/t/p/w342/$backdropPath"
     companion object {
@@ -26,11 +27,13 @@ data class Movie(
                 movies.add (
                     Movie (
                         movieJson.getInt("id") ,
+                        movieJson.getDouble("vote_average") ,
+                        movieJson.getBoolean("adult") ,
+                        movieJson.getString("release_date") ,
                         movieJson.getString("poster_path") ,
                         movieJson.getString("backdrop_path") ,
                         movieJson.getString("title") ,
                         movieJson.getString("overview") ,
-                        movieJson.getDouble("vote_average")
                     )
                 )
             }

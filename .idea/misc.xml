@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/drawable/circle.xml" value="0.2085" />
+        <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/drawable/textview_border.xml" value="0.1515" />
+        <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/layout/activity_detail.xml" value="0.4" />
         <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/layout/item_movie.xml" value="0.40980573543015725" />
+        <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/layout/item_movie.xml" value="0.32416787264833574" />
         <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/layout/movie_info.xml" value="0.40054495912806537" />
         <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/layout/temp.xml" value="0.176" />
+        <entry key="..\:/Users/ritik/AndroidStudioProjects/Flixster/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1515" />
       </map>
     </option>
   </component>

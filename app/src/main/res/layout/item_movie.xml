@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/id_tvPoster"
+        android:id="@+id/id_tvPosterImg"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -16,34 +16,17 @@
         android:layout_centerVertical="true"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <RelativeLayout
-        android:id="@+id/id_progressLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@id/id_tvPoster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ProgressBar
-            android:id="@+id/id_ratingProgress"
-            style="@style/CircularDeterminateProgressBar"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/id_ratingText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@id/id_ratingProgress"
-            android:layout_alignTop="@id/id_ratingProgress"
-            android:layout_alignEnd="@id/id_ratingProgress"
-            android:layout_alignBottom="@id/id_ratingProgress"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="100%"
-            android:textColor="@color/white" />
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/id_tvPosterOverlay"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/id_tvPosterImg"
+        android:layout_alignTop="@id/id_tvPosterImg"
+        android:layout_alignEnd="@id/id_tvPosterImg"
+        android:layout_alignBottom="@id/id_tvPosterImg"
+        android:layout_centerVertical="true"
+        android:scaleX="0.5"
+        android:scaleY="0.5" />
 
     <TextView
         android:id="@+id/id_tvTitle"
@@ -54,7 +37,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_toEndOf="@+id/id_tvPoster"
+        android:layout_toEndOf="@+id/id_tvPosterImg"
         android:ellipsize="end"
         android:maxLines="2"
         android:text="tv title"
@@ -70,7 +53,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_toEndOf="@+id/id_tvPoster"
+        android:layout_toEndOf="@+id/id_tvPosterImg"
         android:textColor="@color/black"
         android:ellipsize="end"
         android:maxLines="5"

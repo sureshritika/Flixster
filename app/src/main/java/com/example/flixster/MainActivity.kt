@@ -15,7 +15,7 @@ import org.json.JSONException
 import java.io.Serializable
 import java.util.ArrayList
 
-private const val NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
+private const val NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=74c8086ad605652288071744d8616ec5"
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,11 +37,11 @@ class MainActivity : AppCompatActivity() {
         val client = AsyncHttpClient()
         client.get(NOW_PLAYING_URL , object : JsonHttpResponseHandler() {
             override fun onFailure(statusCode: Int, headers: Headers?, response: String?, throwable: Throwable?) {
-                Log.e("RITIKA" , "onFailure $statusCode")
+                Log.e("RITIKA" , "TMDB onFailure $statusCode")
             }
 
             override fun onSuccess(statusCode: Int, headers: Headers?, json: JSON) {
-                Log.i("RITIKA" , "onSuccess: JSON data $json")
+                Log.i("RITIKA" , "TMDB onSuccess: JSON data $json")
                 try {
                     val movieJsonArray = json.jsonObject.getJSONArray("results")
                     movies.addAll(Movie.fromJsonArray(movieJsonArray))
