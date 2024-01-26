@@ -1,5 +1,5 @@
 # Flix
-Flix is an android app using Kotlin that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+Flix is an Android app using Kotlin that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 ## Flix Part 2
 
